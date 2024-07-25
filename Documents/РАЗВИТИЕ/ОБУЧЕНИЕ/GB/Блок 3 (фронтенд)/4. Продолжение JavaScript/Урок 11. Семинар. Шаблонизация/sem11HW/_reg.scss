@@ -1,0 +1,153 @@
+.reg {
+    display: flex;
+    flex-direction: row;
+    gap: 128px;
+    padding-top: 64px;
+    padding-bottom: 96px;
+
+    &__box {}
+
+    &__form {
+
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &__header {
+        color: rgb(34, 34, 34);
+        font-family: Lato;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 19px;
+    }
+
+    &__input {
+        width: 360px;
+        height: 45px;
+
+        padding-left: 17px;
+
+        &:hover::placeholder {
+            color: rgb(241, 109, 127);
+        }
+
+        &::placeholder {
+
+            color: rgb(177, 177, 177);
+            font-family: Lato;
+            font-size: 13px;
+            font-weight: 300;
+            line-height: 16px;
+        }
+
+        &[radio]:checked {
+            color: aqua;
+        }
+    }
+
+    &__button {
+        width: 167px;
+        height: 50px;
+        background: rgb(241, 109, 127);
+        border: none;
+        color: rgb(255, 255, 255);
+        font-family: Lato;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17px;
+
+        transition: background .3s;
+
+        &:hover {
+            background: rgb(101, 101, 101);
+        }
+    }
+
+    &__gender {
+        display: flex;
+        gap: 10px;
+        font-family: Lato;
+        font-size: 11px;
+        font-weight: 300;
+        line-height: 13px;
+    }
+
+    &__pass-info {
+        color: rgb(177, 177, 177);
+        font-family: Lato;
+        font-size: 13px;
+        font-weight: 300;
+        line-height: 16px;
+
+        padding-bottom: 19px;
+    }
+}
+
+
+
+.loyality-info {
+
+    &__header {
+        font-family: Lato;
+        font-size: 24px;
+        font-weight: 300;
+        line-height: 29px;
+
+        padding-bottom: 22px;
+    }
+
+    &__text {
+        font-family: Lato;
+        font-size: 24px;
+        font-weight: 300;
+        line-height: 29px;
+
+        padding-bottom: 16px;
+        display: flex;
+        align-items: center;
+        gap: 23px;
+    }
+
+}
+
+input[type='radio'] {
+    accent-color: rgb(241, 109, 127);
+    /* Задаем нужный цвет для радио кнопки. */
+}
+
+@media (max-width: 1024px) {
+    .loyality-info {
+
+
+        &__header {
+            font-size: 16px;
+        }
+
+        &__text {
+            font-size: 16px;
+
+            line-height: 19px;
+
+            padding-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 23px;
+        }
+
+        &__text-box {
+            display: flex;
+            flex-direction: column;
+        }
+
+    }
+}
+
+@media (max-width:768px) {
+
+    .reg {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+}
